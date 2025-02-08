@@ -9,6 +9,8 @@
         <meta name="author" content="">
     
         <title>Add Travel Offer - Dashboard</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
     
         <!-- Custom fonts for this template-->
         <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -30,8 +32,7 @@
     
                 <!-- Sidebar - Brand -->
                 <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                    
-                    <div class="sidebar-brand-text mx-3">Travel Booking <sup></sup></div>
+                    <div class="sidebar-brand-text mx-3">Travel Booking</div>
                 </a>
     
                 <!-- Divider -->
@@ -43,10 +44,6 @@
                         <i class="fas fa-fw fa-tachometer-alt"></i>
                         <span>Dashboard</span></a>
                 </li>
-    
-             
-    
-    
             </ul>
             <!-- End of Sidebar -->
     
@@ -58,16 +55,10 @@
     
                     <!-- Topbar -->
                     <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-    
                         <!-- Sidebar Toggle (Topbar) -->
                         <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                             <i class="fa fa-bars"></i>
                         </button>
-    
-                       
-    
-                       
-    
                     </nav>
                     <!-- End of Topbar -->
     
@@ -76,70 +67,65 @@
     
                         <!-- Page Heading -->
                         <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                            <h1 class="h3 mb-0 text-gray-800">Add a Travel Offer</h1>
-                                  </div>
+                            <h1 class="h3 mb-0 text-gray-800">Add A Travel Offer</h1>
+                        </div>
     
                         <!-- Content Row -->
                         <div class="row">
-    
-                            <!-- Earnings (Monthly) Card Example -->
                             <div class="col-xl-8 col-md-6 mb-4">
                                 <div class="card border-left-primary shadow h-100 py-2">
                                     <div class="card-body">
                                         <div class="row no-gutters align-items-center">
-                                            
                                             <form id="addTravelOfferForm">
                                                 <label for="title">Title:</label><br>
-                                                <input class="form-control form-control-user" type="text" id="title" name="title" minlength="3" required  title="Enter a title for the travel offer. The title must be at least 3 characters long.">
-                                             <br>
-                                        
-                                                <label for="destination">Destination:</label><br>
-                                                <input class="form-control form-control-user" type="text" id="destination" name="destination" pattern="[A-Za-z]{3,}" required title="Enter the destination of the travel offer. The destination must be at least 3 characters long and contain only letters and spaces.">
-                                           <br>
-                                        
-                                                <label for="departure_date">Departure Date:</label><br>
-                                                <input class="form-control form-control-user" type="date" id="departure_date" name="departure_date" required title="Select the departure date.">
-                                             <br>
-                                        
-                                                <label for="return_date">Return Date:</label><br>
-                                                <input class="form-control form-control-user" type="date" id="return_date" name="return_date" required title="Select the return date.">
+                                                <input class="form-control form-control-user" type="text" id="title" name="title">
+                                                <span id="title-error" class="error-message" style="color: red;"></span>
                                                 <br>
-                                        
-                                                <label for="price">Price :</label><br>
-                                                <input class="form-control form-control-user"  type="number" id="price" name="price" step="0.01" min="0" required title="Enter the price of the travel offer. The price must be a positive number or decimal.">
-                                        <br>
-                                        
-                                                
-                                                <div class="form-group">
+                                            
+                                                <label for="destination">Destination:</label><br>
+                                                <input class="form-control form-control-user" type="text" id="destination" name="destination">
+                                                <span id="destination-error" class="error-message" style="color: red;"></span>
+                                                <br>
+                                            
+                                                <label for="departure_date">Departure Date:</label><br>
+                                                <input class="form-control form-control-user" type="date" id="departure_date" name="departure_date">
+                                                <span id="departure_date-error" class="error-message" style="color: red;"></span>
+                                                <br>
+                                            
+                                                <label for="return_date">Return Date:</label><br>
+                                                <input class="form-control form-control-user" type="date" id="return_date" name="return_date">
+                                                <span id="return_date-error" class="error-message" style="color: red;"></span>
+                                                <br>
+                                            
+                                                <label for="price">Price:</label><br>
+                                                <input class="form-control form-control-user" type="number" id="price" name="price">
+                                                <span id="price-error" class="error-message" style="color: red;"></span>
+                                                <br>
+                                            
+                                                <div class="forms-group">
                                                     <div class="custom-control custom-checkbox small">
                                                         <input type="checkbox" class="custom-control-input" id="customCheck">
-                                                        <label class="custom-control-label" for="customCheck">Availability
-                                                            </label>
+                                                        <label class="custom-control-label" for="customCheck">Availability</label>
                                                     </div>
                                                 </div>
+                                            
                                                 <label for="category">Category:</label><br>
-                                                <select class="form-control form-control-user" id="category" name="category" title="Select the category of the travel offer.">
+                                                <select class="form-control form-control-user" id="category" name="category">
                                                     <option value="adventure">Adventure</option>
                                                     <option value="relaxation">Relaxation</option>
                                                     <option value="culture">Culture</option>
-                                                    
                                                 </select>
-                                           <br>
-                                        
-                                                <button type="submit" class="btn btn-primary btn-user btn-block">Add Offer</button>
+                                                <br>
+
+                                            <!-- partie 2 -->
+                                                <button type="submit" class="btn btn-primary btn-user btn-block" onclick="validerFormulaire()">Add Offer</button>
                                             </form>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-    
-                          
                         </div>
-    
-                      
-    
                     </div>
-                   
     
                 </div>
                
@@ -150,35 +136,14 @@
                         </div>
                     </div>
                 </footer>
-              
-    
             </div>
-         
-    
         </div>
-       
+
         <a class="scroll-to-top rounded" href="#page-top">
             <i class="fas fa-angle-up"></i>
         </a>
-    
-    
-        <!-- Bootstrap core JavaScript-->
-        <script src="vendor/jquery/jquery.min.js"></script>
-        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    
-        <!-- Core plugin JavaScript-->
-        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    
-        <!-- Custom scripts for all pages-->
-        <script src="js/sb-admin-2.min.js"></script>
-    
-        <!-- Page level plugins -->
-        <script src="vendor/chart.js/Chart.min.js"></script>
-    
-        <!-- Page level custom scripts -->
-        <script src="js/demo/chart-area-demo.js"></script>
-        <script src="js/demo/chart-pie-demo.js"></script>
+
+        <script src="js/addOffer.js"></script>
     
     </body>
-
 </html>
