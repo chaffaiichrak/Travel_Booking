@@ -56,5 +56,63 @@ class OfferDeVoyage {
                 </tr>
               </table>";
     }
+// Getters
+public function getTitle() {
+    return $this->title;
 }
+
+public function getDestination() {
+    return $this->destination;
+}
+
+public function getDepartureDate() {
+    return $this->departure_date;
+}
+
+public function getReturnDate() {
+    return $this->return_date;
+}
+
+public function getPrice() {
+    return $this->price;
+}
+
+public function isDisponible() {
+    return $this->disponible;
+}
+
+public function getCategory() {
+    return $this->category;
+}
+
+// Setters
+public function setTitle($title) {
+    $this->title = $title;
+}
+
+public function setDestination($destination) {
+    $this->destination = $destination;
+}
+
+public function setDepartureDate($departure_date) {
+    $this->departure_date = $departure_date;
+}
+
+public function setReturnDate($return_date) {
+    $this->return_date = $return_date;
+}
+
+public function setPrice($price) {
+    $this->price = $price;
+}
+
+public function setDisponible($disponible) {
+    $this->disponible = $disponible;
+}
+
+public function setCategory($category) {
+    $this->category = $category;
+}
+}
+
 ?>
